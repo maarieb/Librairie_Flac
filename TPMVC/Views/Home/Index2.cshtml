@@ -1,0 +1,46 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index2</title>
+</head>
+<body>
+    <div class="pres">
+        <h1>FLAC</h1>
+        <h2>Bienvenue sur l'inventaire des livres</h2>
+    </div>
+    <p>
+        Voici les livres disponibles :
+    </p>
+    <table>
+        <tr>
+            <th>Titre</th>
+            <th>Auteur</th>
+            <th>Nombre de pages</th>
+            <th>Modifier ?</th>
+        </tr>
+        @foreach (var livre in ViewData["Livres"] as List<TPMVC.Models.Livre>)
+        {
+                <tr>
+                    <td><a href="https://localhost:5001/Home/DetailLivre">@livre.Titre</a></td>
+                    <td><a href="https://localhost:5001/Home/DetailAuteur">@livre.Auteur</a></td>
+                    <td>@livre.NbPages</td>
+                    <td><a href="https://localhost:5001/Home/Modifier">Modifier</a></td>
+                </tr>
+        }
+    </table>
+    <br/>
+    <div class="ajout">
+        Pour ajouter un livre, faire : "https://localhost:5001/Home/Ajouter?titre=letitre&auteur=lauteur&nbPages=pages"
+    </div>
+    <div class="supp">
+        Pour supprimer un livre, faire : "https://localhost:5001/Home/Supprimer?titre=letitre"
+    </div>
+</body>
+</html>

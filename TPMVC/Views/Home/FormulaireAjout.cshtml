@@ -1,0 +1,45 @@
+﻿@model TPMVC.ViewModel.HomeViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Solway:wght@300&display=swap" rel="stylesheet">
+    <title>AjoutLivre</title>
+</head>
+<body>
+        <h1>FLAC</h1>
+        <div>Ajouter un livre</div>
+
+        @using (Html.BeginForm("Ajout", "Home", FormMethod.Get))
+        {  
+            <table>       
+                <tr>
+                    <td>@Html.Label("titre", "Titre du livre")</td>
+                    <td>@Html.TextBoxFor(livre => livre.Titre)</td>
+                </tr>
+                <tr>
+                    <td>@Html.Label("auteur", "Auteur du livre")</td>
+                    <td>@Html.TextBoxFor(livre => livre.Auteur)</td>
+                </tr>
+                 <tr>
+                    <td>@Html.Label("page", "Nombre de pages")</td>
+                <td>@Html.TextBoxFor(livre => livre.NbPages)</td>
+                </tr>
+            </table>
+            <br />
+            <input type="submit" value="Valider"/>
+        }
+    <div class="retour">
+         <a href="https://localhost:5001/Home/Index">Retour</a>
+    </div>
+</body>
+</html>

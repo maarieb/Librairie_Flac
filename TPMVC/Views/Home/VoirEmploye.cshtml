@@ -1,0 +1,45 @@
+﻿@model TPMVC.ViewModel.HomeViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Solway:wght@300&display=swap" rel="stylesheet">
+    <title>Liste Employes</title>
+</head>
+<body>
+    <div class="pres">
+        <h1>FLAC</h1>
+        <h2>La liste des employés FLAC</h2>
+    </div>
+    <table>
+        <tr>
+            <th>Prénom</th>
+            <th>Nom</th>
+            <th>Age</th>
+            <th>Rayon</th>
+        </tr>
+        @foreach (var employe in Model.Employes)
+        {
+            <tr>
+                <td>@employe.Prenom</td>
+                <td>@employe.Nom</td>
+                <td>@employe.Age</td>
+                <td>@employe.Rayon</td>
+            </tr>
+        }
+    </table>
+    <br/>
+    <div class="retour">
+        <a href="https://localhost:5001/Home/Index">Retour</a>
+    </div>
+</body>
+</html>

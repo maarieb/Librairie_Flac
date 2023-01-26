@@ -1,0 +1,61 @@
+﻿@model TPMVC.ViewModel.HomeViewModel
+
+@*@{
+    Layout = null;
+}*@
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Solway:wght@300&display=swap" rel="stylesheet">
+    <title>Liste Livres</title>
+</head>
+<body>
+    <div class="pres">
+        <h1>FLAC</h1>
+        <h2>La liste des livres disponibles</h2>
+    </div>
+    <table>
+        <tr>
+            <th>Titre</th>
+            <th>Auteur</th>
+            <th>Nombre de pages</th>
+        </tr>
+        @foreach (var livre in @Model.Livres)
+        {
+            <tr>
+                <td>@livre.Titre</td>
+                <td>@livre.Auteur</td>
+                <td class="page">@livre.NbPages</td>
+            </tr>
+        }
+    </table>
+    <br/>
+    <div class="ajoutSupp">
+        Pour ajouter un livre : <span><a href="https://localhost:5001/Home/FormulaireAjout">ICI</a> !</span><br /><br />
+        Pour supprimer un livre, veuillez indiquer le titre du livre concerné :
+        @using (Html.BeginForm("Supp", "Home", FormMethod.Get))
+        {
+            @Html.DropDownList("titre", new SelectList(@Model.Titres, "titre"), "[Sélectionner un titre]")
+
+@*        <table class="tablesupp">
+            <tr>
+                <td>@Html.Label("titre", "Titre du livre")</td>
+                    <td>@Html.TextBoxFor(livre => livre.Titre, new { style="width:300px" })</td>
+            </tr>
+        </table>
+*@
+        <input class="btnsup" type="submit" value="Supprimer"/>
+        }
+    </div>
+
+    <div class="retour">
+        <a href="https://localhost:5001/Home/Index">Retour</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TPMVC", "TPMVC\TPMVC.csproj", "{EB9E6130-57C0-41D9-A310-3F4255FF1963}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EB9E6130-57C0-41D9-A310-3F4255FF1963}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB9E6130-57C0-41D9-A310-3F4255FF1963}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB9E6130-57C0-41D9-A310-3F4255FF1963}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB9E6130-57C0-41D9-A310-3F4255FF1963}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FE9F394D-AEE0-4345-95B8-5BD559100D8E}
+	EndGlobalSection
+EndGlobal

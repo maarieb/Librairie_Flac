@@ -1,0 +1,27 @@
+﻿@model TPMVC.ViewModel.HomeViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="/css/style.css" rel="stylesheet" type="text/css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Solway:wght@300&display=swap" rel="stylesheet">
+    <title>Suppression</title>
+</head>
+<body>
+    <div>
+        <h1>FLAC</h1>
+        <p>Le livre @Model.Titre a bien été supprimé</p>
+    </div>
+    <div class="retour">
+        <a href="https://localhost:5001/Home/VoirLivre">Retour</a>
+    </div>
+</body>
+</html>
